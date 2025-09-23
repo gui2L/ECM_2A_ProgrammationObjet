@@ -14,4 +14,8 @@ void menu(char operation[20]);
 
 int** SaisirMatrice(int *lignes, int *colonnes);
 void AfficheMatrice(int *lignes, int *colonnes, int **Mat);
+//MaxLigne
+//MinColonne
+//TrouvePointsClos
+
 #endif
