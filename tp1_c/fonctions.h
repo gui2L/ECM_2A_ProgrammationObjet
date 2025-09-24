@@ -18,5 +18,4 @@ int** MaxLigne( int *lignes, int *colonnes, int **MAT);
 int** MinColonne(int *lignes, int *colonnes, int **Mat);
 void TrouvePointsClos(int lignes, int colonnes, int **Mat);
 
-
 #endif
