@@ -1,0 +1,56 @@
+# Fichiers objets
+*.o
+*.obj
+*.lo
+*.la
+*.al
+*.libs
+
+# Fichiers d'archives et binaires
+*.a
+*.lib
+*.so
+*.so.*
+*.dll
+*.dylib
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug / Profiling
+*.dSYM/
+*.su
+*.idb
+*.pdb
+*.mod
+*.exp
+
+# Outils de build
+*.stackdump
+*.ilk
+*.map
+*.sdf
+*.cache
+*.dir/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+build/
+Debug/
+Release/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Autres
+*.log
+*.tmp
