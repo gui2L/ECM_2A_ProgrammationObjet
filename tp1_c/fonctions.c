@@ -81,7 +81,6 @@ int** SaisirMatrice(int *lignes, int *colonnes) {
 }
 
 void AfficheMatrice(int *lignes, int *colonnes, int **Mat){
-    printf("matrice :");
     for (int i = 0; i < *lignes; i++) {
         printf("\n");
         for (int j = 0; j < *colonnes; j++) {
@@ -90,4 +89,82 @@ void AfficheMatrice(int *lignes, int *colonnes, int **Mat){
         
     }
     printf("\n");
+}
+
+int** MaxLigne( int *lignes, int *colonnes, int **Mat) {
+
+    int **MaxLig = malloc(*lignes * sizeof(int*));
+    for (int i = 0; i < *lignes; i++) {
+        MaxLig[i] = malloc(*colonnes * sizeof(int));
+    }
+
+    for (int i = 0; i < *lignes; i++) {
+        int maxVal = Mat[i][0];
+
+        for (int j = 1; j < *colonnes; j++) {
+            if (Mat[i][j] > maxVal) {
+                maxVal = Mat[i][j];
+            }
+        }
+
+        for (int j = 0; j < *colonnes; j++) {
+            if (Mat[i][j] == maxVal) {
+                MaxLig[i][j] = 1;
+            } else {
+                MaxLig[i][j] = 0;
+            }
+        }
+    }
+
+    return MaxLig;
+}
+
+int** MinColonne(int *lignes, int *colonnes, int **Mat) {
+
+    int **MinCol = malloc(*lignes * sizeof(int*));
+    for (int i = 0; i < *lignes; i++) {
+        MinCol[i] = malloc(*colonnes * sizeof(int));
+    }
+
+    for (int j = 0; j < *colonnes; j++) {
+        int minVal = Mat[0][j];
+
+        for (int i = 1; i < *lignes; i++) {
+            if (Mat[i][j] < minVal) {
+                minVal = Mat[i][j];
+            }
+        }
+
+        for (int i = 0; i < *lignes; i++) {
+            if (Mat[i][j] == minVal) {
+                MinCol[i][j] = 1;
+            } else {
+                MinCol[i][j] = 0;
+            }
+        }
+    }
+
+    return MinCol;
+}
+
+void TrouvePointsClos(int lignes, int colonnes, int **Mat) {
+    int **MaxL = MaxLigne(&lignes, &colonnes, Mat);
+    int **MinC = MinColonne(&lignes, &colonnes, Mat);
+
+    printf("Points-Clos :\n");
+
+    for (int i = 0; i < lignes; i++) {
+        for (int j = 0; j < colonnes; j++) {
+            if (MaxL[i][j] == 1 && MinC[i][j] == 1) {
+                printf("Valeur=%d, ligne %d, colonne %d)\n", Mat[i][j], i+1, j+1);
+            }
+        }
+    }
+
+    for (int i = 0; i < lignes; i++) {
+        free(MaxL[i]);
+        free(MinC[i]);
+    }
+    free(MaxL);
+    free(MinC);
 }
