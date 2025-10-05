@@ -26,8 +26,6 @@ public :
         return compteur;
     }
 
-
-    //peut-etre modifier en static bonnes methodes
     Point saisie();
     void Afficher();
     void Translate(double dist);
