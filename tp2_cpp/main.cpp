@@ -4,11 +4,12 @@
 #include <string>
 
 int Point::compteur = 0;
+int Vector::compteur = 0;
 
 int main(){
 
     //ex1
-    Point p1;
+    /*Point p1;
     p1.Afficher();
     Point p2(1, 2, 1);
     p2.Afficher();
@@ -27,12 +28,58 @@ int main(){
     A.Afficher();
     B.Afficher();
     std::cout << "Distance entre les points A et B : " << A.Distance(B) << "\n";
-    std::cout << "Nb d'instances de Point : " << Point::getCompteur() << "\n";
+    std::cout << "Nb d'instances de Point : " << Point::getCompteur() << "\n";*/
 
     //ex2
+    Vector v1;
+    v1.Afficher();
+    Vector v2(2);
+    v2.Afficher();
+    Vector v3({0, 0, 1});
+    v3.Afficher();
+    Vector v4 = v3;
+    v4.Afficher();
+    std::cout<<"------------\n";
+
+    Vector v5({0, 0, 0});
+    std::cout << "vecteur v5 avant modification : "; v5.Afficher();
     
+    std::cout << "vecteur v5 apres modification : \n";
+    v5.setCoordinates(0, 1/std::sqrt(2));
+    v5.setCoordinates(2, 1/std::sqrt(2));
+
+    std::cout << "coord x : " << v5.getCoordinates(0) << "\n";
+    std::cout << "coord y : " << v5.getCoordinates(1) << "\n";
+    std::cout << "coord z : " << v5.getCoordinates(2) << "\n";
+    v5.Afficher();
+
+    std::cout << "norme du vecteur v5 : " << v5.Norme() << "\n";
+    std::cout<<"------------\n";
+
+    Vector v6({1/std::sqrt(2), 0, 1/std::sqrt(2)});
+    Vector v7({3, 1/std::sqrt(2), 1/std::sqrt(2)});
+    std::cout << "vecteur v6 : "; v6.Afficher();
+    std::cout << "vecteur v7 : "; v7.Afficher();
+
+    if (v5.isEqual(v6)){std::cout << "v5 est egal a v6 \n";}else{std::cout << "v5 n'est pas egal a v6 \n";}
+    if (v5.isEqual(v7)){std::cout << "v5 est egal a v7 \n";}else{std::cout << "v5 n'est pas egal a v7 \n";}
+    std::cout<<"------------\n";
+
+    Vector u = Vector::Additionner(v6, v7);
+    std::cout << "vecteur u, l'addition de v6 et v7 : "; u.Afficher();
+    u.Multiplier(10);
+    std::cout << "vecteur u, multiplier par 10 : "; u.Afficher();
+    std::cout<<"------------\n";
+
+    Vector a({0, 1/std::sqrt(2), 1/std::sqrt(2)});
+    Vector b({1, 2, 3});
+    std::cout << "vecteur a : "; a.Afficher();
+    std::cout << "vecteur b : "; b.Afficher();
+    std::cout << "Produit scalaire entre a et b : " << Vector::ProduitScalaire(a, b) << "\n";
+    std::cout << "Produit scalaire entre a et a : " << Vector::ProduitScalaire(a, a) << "\n";
 
 
-
+    std::cout << "\nNb d'instances de Vector : " << Vector::getCompteur();
+    
     return 0;
 }
