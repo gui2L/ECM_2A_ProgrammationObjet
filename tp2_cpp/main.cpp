@@ -3,9 +3,6 @@
 #include <iostream>
 #include <string>
 
-int Point::compteur = 0;
-int Vector::compteur = 0;
-
 int main(){
 
     //ex1

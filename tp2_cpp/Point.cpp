@@ -21,6 +21,8 @@ Point :: ~Point() {
     compteur--;
 }
 
+int Point::compteur = 0;
+
 double Point::getX() const {
     return x;
 }

@@ -5,6 +5,8 @@ Vector::Vector(std::vector<double> valeurs) : coords(valeurs){compteur++;}
 Vector::Vector(const Vector &v) : coords(v.coords) {compteur++;}
 Vector::~Vector(){compteur--;}
 
+int Vector::compteur = 0;
+
 double Vector::getCoordinates(int i) const{
     return coords[i];
 }
