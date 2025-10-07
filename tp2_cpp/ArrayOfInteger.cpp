@@ -39,7 +39,7 @@ int ArrayOfInteger::Contient(int INT){
 void ArrayOfInteger::Remove(int INT){
     int position = ArrayOfInteger::Contient(INT);
     if(position == -1){
-        std::cout<< "entier : " << INT << " introuvable dans tableau";
+        std::cout<< "entier:" << INT << " introuvable dans tableau \n";
     }else{
         tab.erase(tab.begin() + position);
     }
