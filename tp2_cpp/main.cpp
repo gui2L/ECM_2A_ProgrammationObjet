@@ -1,5 +1,6 @@
 #include "Point.h"
 #include "Vector.h"
+#include "ArrayOfInteger.h"
 #include <iostream>
 #include <string>
 
@@ -28,7 +29,7 @@ int main(){
     std::cout << "Nb d'instances de Point : " << Point::getCompteur() << "\n";*/
 
     //ex2
-    Vector v1;
+    /*Vector v1;
     v1.Afficher();
     Vector v2(2);
     v2.Afficher();
@@ -76,7 +77,19 @@ int main(){
     std::cout << "Produit scalaire entre a et a : " << Vector::ProduitScalaire(a, a) << "\n";
 
 
-    std::cout << "\nNb d'instances de Vector : " << Vector::getCompteur();
+    std::cout << "\nNb d'instances de Vector : " << Vector::getCompteur();*/
+
+    ArrayOfInteger t1;
+    //t1.Afficher();
+    ArrayOfInteger t2(2);
+    //t2.Afficher();
+    ArrayOfInteger t3({1, 2, 3});
+    //t3.Afficher();
+    ArrayOfInteger t4 = t3;
+    //t4.Afficher();
+    std::cout<< ArrayOfInteger::getCompteur();
+    std::cout<<"------------\n";
+
     
     return 0;
 }
