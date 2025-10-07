@@ -29,9 +29,18 @@ void ArrayOfInteger::Afficher(){
 }
 
 
-bool ArrayOfInteger::Contient(int INT){
+int ArrayOfInteger::Contient(int INT){
     for (int i = 0; i < tab.size(); i++) {
-        if (INT == tab[i]){return 1;}
+        if (INT == tab[i]){return i;}
     }
-    return 0;
+    return -1;
+}
+
+void ArrayOfInteger::Remove(int INT){
+    int position = ArrayOfInteger::Contient(INT);
+    if(position == -1){
+        std::cout<< "entier : " << INT << " introuvable dans tableau";
+    }else{
+        tab.erase(tab.begin() + position);
+    }
 }

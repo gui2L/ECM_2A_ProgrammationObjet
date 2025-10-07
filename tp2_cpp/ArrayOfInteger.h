@@ -19,7 +19,8 @@ class ArrayOfInteger{
         }
 
         void Afficher();
-        bool Contient(int INT);
+        int Contient(int INT);
+        void Remove(int INT);
 
         
 

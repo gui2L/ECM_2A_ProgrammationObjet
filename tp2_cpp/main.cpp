@@ -89,9 +89,9 @@ int main(){
     std::cout << "tableau t4 : "; t4.Afficher();
     std::cout<<"------------\n";
 
-    if (t1.Contient(0)){ std::cout<<"t1 contient 0 \n";}else{ std::cout<<"t1 ne contient pas 0 \n";};
-    if (t3.Contient(1) && t3.Contient(2) && t3.Contient(3)){ std::cout<<"t3 contient 1, 2, 3 \n";}else{ std::cout<<"t3 ne contient pas tous les entiers 1, 2, 3 \n";};
-    if (t3.Contient(4)){ std::cout<<"t3 contient 4";}else{ std::cout<<"t3 ne contient pas 4 \n";};
+    if (t1.Contient(0) != -1){ std::cout<<"t1 contient 0 \n";}else{ std::cout<<"t1 ne contient pas 0 \n";};
+    if (t3.Contient(1) != -1 && t3.Contient(2) != -1 && t3.Contient(3) != -1){ std::cout<<"t3 contient 1, 2, 3 \n";}else{ std::cout<<"t3 ne contient pas tous les entiers 1, 2, 3 \n";};
+    if (t3.Contient(4) != -1){ std::cout<<"t3 contient 4";}else{ std::cout<<"t3 ne contient pas 4 \n";};
     std::cout << "\nNb d'instances de ArrayOfInteger : " << ArrayOfInteger::getCompteur();
 
     
