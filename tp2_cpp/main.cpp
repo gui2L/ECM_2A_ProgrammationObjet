@@ -97,9 +97,9 @@ int main(){
     ArrayOfInteger t5({2, 0, 2, 4});
     std::cout << "tableau t5 avant modif : "; t5.Afficher();
     t5.Remove(4);
-    t5.Remove(4);
-    t5.Remove(3);
-    t5.Add(5);
+    t5.Remove(4); 
+    t5.Remove(3); 
+    t5.Add(5);  
     t5.Add(5);
     std::cout << "tableau t5 apres modif : "; t5.Afficher();
     

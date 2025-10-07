@@ -18,11 +18,12 @@ class ArrayOfInteger{
             return compteur;
         }
 
+        int getDimension() const;
         void Afficher();
         int Contient(int INT);
         void Remove(int INT);
         void Add(int INT);
-        bool Equal(std::vector<int> &tt);
+        bool Equal(const ArrayOfInteger &tt);
 
         
 
