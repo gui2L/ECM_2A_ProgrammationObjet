@@ -27,3 +27,11 @@ void ArrayOfInteger::Afficher(){
     }
     std::cout << "] \n";
 }
+
+
+bool ArrayOfInteger::Contient(int INT){
+    for (int i = 0; i < tab.size(); i++) {
+        if (INT == tab[i]){return 1;}
+    }
+    return 0;
+}

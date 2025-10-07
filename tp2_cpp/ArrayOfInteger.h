@@ -19,6 +19,7 @@ class ArrayOfInteger{
         }
 
         void Afficher();
+        bool Contient(int INT);
 
         
 
