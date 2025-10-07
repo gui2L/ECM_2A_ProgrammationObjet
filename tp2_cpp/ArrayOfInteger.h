@@ -18,6 +18,8 @@ class ArrayOfInteger{
             return compteur;
         }
 
+        void Afficher();
+
         
 
 };

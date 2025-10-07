@@ -80,15 +80,16 @@ int main(){
     std::cout << "\nNb d'instances de Vector : " << Vector::getCompteur();*/
 
     ArrayOfInteger t1;
-    //t1.Afficher();
+    t1.Afficher();
     ArrayOfInteger t2(2);
-    //t2.Afficher();
+    t2.Afficher();
     ArrayOfInteger t3({1, 2, 3});
-    //t3.Afficher();
+    t3.Afficher();
     ArrayOfInteger t4 = t3;
-    //t4.Afficher();
-    std::cout<< ArrayOfInteger::getCompteur();
+    t4.Afficher();
+    
     std::cout<<"------------\n";
+    std::cout << "\nNb d'instances de ArrayOfInteger : " << ArrayOfInteger::getCompteur();
 
     
     return 0;
