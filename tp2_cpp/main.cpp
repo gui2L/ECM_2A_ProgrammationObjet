@@ -94,10 +94,13 @@ int main(){
     if (t3.Contient(4) != -1){ std::cout<<"t3 contient 4";}else{ std::cout<<"t3 ne contient pas 4 \n";};
     
 
-    ArrayOfInteger t5({2, 0, 1, 8});
+    ArrayOfInteger t5({2, 0, 2, 4});
     std::cout << "tableau t5 avant modif : "; t5.Afficher();
-    t5.Remove(1);
+    t5.Remove(4);
+    t5.Remove(4);
     t5.Remove(3);
+    t5.Add(5);
+    t5.Add(5);
     std::cout << "tableau t5 apres modif : "; t5.Afficher();
     
     

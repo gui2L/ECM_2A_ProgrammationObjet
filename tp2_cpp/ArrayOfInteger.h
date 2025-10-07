@@ -6,7 +6,7 @@
 
 class ArrayOfInteger{
     private:
-        std::vector<int> tab;
+        std::vector<int> valeurs;
         static int compteur;
     public:
         ArrayOfInteger(int dim = 10);
@@ -21,6 +21,8 @@ class ArrayOfInteger{
         void Afficher();
         int Contient(int INT);
         void Remove(int INT);
+        void Add(int INT);
+        bool Equal(std::vector<int> &tt);
 
         
 
