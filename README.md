@@ -3,7 +3,7 @@ Travaux réalisés suivant l'UE Programmation Objet à Centrale Méditerranée; 
 
 --- 
 
-### Versions utilisés : 
+### Versions utilisées : 
 - **gcc.exe** (Rev8, Built by MSYS2 project) → `15.2.0`
 - **g++.exe** (Rev8, Built by MSYS2 project) → `15.2.0`
 
