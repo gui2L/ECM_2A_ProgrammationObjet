@@ -1,5 +1,5 @@
 # Description du répertoire : 
-Travaux réalisés suivant l'UE Programmation Objet à Centrale Méditerranée; composés de dossiers TP, réalisés en C/C++  
+Travaux réalisés suivant l'UE Programmation Objet à Centrale Méditerranée; composés de dossiers TPs réalisés en C/C++  
 
 --- 
 
