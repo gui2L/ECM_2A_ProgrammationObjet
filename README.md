@@ -1,4 +1,4 @@
-# Description du répertoire : 
+# Description du répertoire
 Travaux réalisés suivant l'UE Programmation Objet à Centrale Méditerranée; composés de dossiers TPs réalisés en C/C++  
 
 --- 
