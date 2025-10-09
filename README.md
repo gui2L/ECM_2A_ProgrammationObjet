@@ -5,10 +5,10 @@ Travaux réalisés suivant l'UE Programmation Objet à Centrale Méditerranée; 
 gcc.exe (Rev8, Built by MSYS2 project) 15.2.0
 g++.exe (Rev8, Built by MSYS2 project) 15.2.0
 
-- Compilation ---> éxecution :
-Pour le dossier tp1_c,          gcc fonctions.c main.c -o programme.exe 
-Pour les autres dossiers tp,    g++ *cpp -o programme.exe 
-                                ---> ./programme
+- Compilation ---> Execution :
+gcc fonctions.c main.c -o programme.exe (Pour le dossier tp1_c)           
+g++ *cpp -o programme.exe (Pour les autres dossiers tp)     
+---> ./programme
 
 - License : 
 
