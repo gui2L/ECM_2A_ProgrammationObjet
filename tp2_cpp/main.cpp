@@ -79,6 +79,7 @@ int main(){
 
     std::cout << "\nNb d'instances de Vector : " << Vector::getCompteur();*/
 
+    //ex3
     ArrayOfInteger t1;
     std::cout << "tableau t1 : "; t1.Afficher();
     ArrayOfInteger t2(2);
@@ -87,24 +88,42 @@ int main(){
     std::cout << "tableau t3 : "; t3.Afficher();
     ArrayOfInteger t4 = t3;
     std::cout << "tableau t4 : "; t4.Afficher();
+
     std::cout<<"------------\n";
 
     if (t1.Contient(0) != -1){ std::cout<<"t1 contient 0 \n";}else{ std::cout<<"t1 ne contient pas 0 \n";};
     if (t3.Contient(1) != -1 && t3.Contient(2) != -1 && t3.Contient(3) != -1){ std::cout<<"t3 contient 1, 2, 3 \n";}else{ std::cout<<"t3 ne contient pas tous les entiers 1, 2, 3 \n";};
     if (t3.Contient(4) != -1){ std::cout<<"t3 contient 4";}else{ std::cout<<"t3 ne contient pas 4 \n";};
     
+    std::cout<<"------------\n";
 
-    ArrayOfInteger t5({2, 0, 2, 4});
+    ArrayOfInteger t5({1, 0, 2, 4});
     std::cout << "tableau t5 avant modif : "; t5.Afficher();
     t5.Remove(4);
     t5.Remove(4); 
     t5.Remove(3); 
     t5.Add(5);  
     t5.Add(5);
+    t5.Add(8);
     std::cout << "tableau t5 apres modif : "; t5.Afficher();
     
+    std::cout<<"------------\n";
+
+    ArrayOfInteger t6({1, 0, 2, 6});
+    std::cout << "tableau t6 avant modif : "; t6.Afficher();
+
+    if (t5.Equal(t6)){std::cout<<"t5 egal a t6 \n";}
+    else{std::cout<<"t5 pas egal a t6 \n";};
+
+    t6.Remove(6);
+    t6.Add(5);
+    t6.Add(8);
     
+    std::cout << "tableau t6 apres modif : "; t6.Afficher();
     
+    if (t5.Equal(t6)){std::cout<<"t5 egal a t6 \n";}
+    else{std::cout<<"t5 pas egal a t6 \n";};
+
     std::cout << "\nNb d'instances de ArrayOfInteger : " << ArrayOfInteger::getCompteur();
 
     

@@ -5,9 +5,9 @@
 
 int ArrayOfInteger::compteur = 0;
 
-int ArrayOfInteger::getDimension() const{
+/*int ArrayOfInteger::getDimension() const{
     return valeurs.size();
-}
+}*/
 
 ArrayOfInteger::ArrayOfInteger(int dim) : valeurs(dim, 0){compteur++;
 }
@@ -51,7 +51,7 @@ void ArrayOfInteger::Remove(int INT){
 }
 
 void ArrayOfInteger::Add(int INT){
-    if(ArrayOfInteger::Contient(INT) != -1){
+    if(Contient(INT) != -1){
         std::cout<< "entier:" << INT << " deja dans tableau :"; Afficher();
     }else{
         valeurs.push_back(INT);
@@ -61,12 +61,15 @@ void ArrayOfInteger::Add(int INT){
 }
 
 bool ArrayOfInteger::Equal(const ArrayOfInteger &tt){
-    if (tt.getDimension() != valeurs.size()){
+    if (tt.valeurs.size() != valeurs.size()){
         return 0;
     }else{
         for(int i = 0; i < valeurs.size(); i++){
-            if(valeurs[i] != )
+            if(valeurs[i] != tt.valeurs[i]){
+                return 0;
+            }
         }
+        return 1;
     }
     
 }

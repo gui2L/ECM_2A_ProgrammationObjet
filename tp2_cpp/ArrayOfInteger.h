@@ -18,7 +18,7 @@ class ArrayOfInteger{
             return compteur;
         }
 
-        int getDimension() const;
+        //int getDimension() const;
         void Afficher();
         int Contient(int INT);
         void Remove(int INT);
