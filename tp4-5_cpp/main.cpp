@@ -11,6 +11,26 @@ int main(){
     std::cout<<"date d2 : ";d2.affiche();
     std::cout<<"date d3 : ";d3.affiche();
 
+    std::cout<<"\n";
+
+    Date d4(22, 11, 1963);
+    std::cout<<"date d4 avant modif: ";d4.affiche();
+    std::cout<<"jour de d4 : " << d4.getJour() << "\n";
+    std::cout<<"mois de d4 : " << d4.getMois() << "\n";
+    std::cout<<"annee de d4 : " << d4.getAnnee() << "\n";
+
+    d4.setJour(8);
+    d4.setMois(11);
+    d4.setAnnee(1960);
+    std::cout<<"date d4 apres modif: ";d4.affiche();
+    std::cout<<"jour de d4 : " << d4.getJour() << "\n";
+    std::cout<<"mois de d4 : " << d4.getMois() << "\n";
+    std::cout<<"annee de d4 : " << d4.getAnnee() << "\n";
+
+    std::cout<<"\n";
+
+     
+
 
 
     return 0;
