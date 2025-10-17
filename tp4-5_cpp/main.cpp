@@ -31,7 +31,9 @@ int main(){
 
     std::cout<<"\n";
 
-     
+    Heure h1;
+    Heure h2(1);
+    Heure h3(23, 17);
 
 
 
