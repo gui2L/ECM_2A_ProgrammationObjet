@@ -60,6 +60,9 @@ int main(){
 
     RDV r1;
     r1.affiche();
+    //r1.saisieLieu();
+    r1.saisie();
+    r1.affiche();
 
 
     return 0;
