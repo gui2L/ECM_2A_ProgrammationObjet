@@ -8,14 +8,21 @@ RDV::RDV() : d(), h(){
 }
 
 void RDV::affiche(){
-    std::cout<< "rdv " << lieu << "\n"; 
+    std::cout<< "RDV --> " << lieu << "\n"; 
     std::cout<< "le "; d.affiche();
-    std::cout<< "a "; h.affiche();
-    std::cout<< "avec " << nb_participants << " participants : ";
-    for (int i = 0; i < nb_participants; i++) {
-        std::cout << participants[i];
-        if (i < nb_participants - 1) std::cout << ", ";
+    std::cout<< "a  "; h.affiche();
+    if (nb_participants > 1){
+        std::cout<< "avec " << nb_participants << " participants : ";
+        for (int i = 0; i < nb_participants; i++) {
+            std::cout << participants[i];
+            if (i < nb_participants - 1) std::cout << ", ";
+        }
+    }else{
+        if(nb_participants = 1){
+            std::cout<< "avec " << participants[0];
+        }
     }
+    std::cout<<"\n";
     
 }
 
