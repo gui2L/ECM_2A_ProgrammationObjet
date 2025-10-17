@@ -7,6 +7,8 @@ class Heure{
         int minutes;
     public:
         Heure(int h = 0, int min = 0);
+        ~Heure();
+        void affiche();
 
 };
 #endif

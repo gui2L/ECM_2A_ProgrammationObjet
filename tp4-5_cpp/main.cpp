@@ -34,6 +34,9 @@ int main(){
     Heure h1;
     Heure h2(1);
     Heure h3(23, 17);
+    h1.affiche();
+    h2.affiche();
+    h3.affiche();
 
 
 
