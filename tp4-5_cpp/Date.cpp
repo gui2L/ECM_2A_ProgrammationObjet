@@ -15,6 +15,13 @@ Date::Date(int j, int m, int a){
     }
 }
 
+Date::Date(Date &d):jour(d.jour), mois(d.mois), annee(d.annee){
+}
+
+Date::~Date(){
+    
+}
+
 void Date::affiche(){
     std::cout<< jour << " / " << mois << " / " << annee << "\n"; 
 }

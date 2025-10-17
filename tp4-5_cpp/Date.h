@@ -10,6 +10,8 @@ class Date{
 
     public:
         Date(int j, int m, int a);
+        Date(Date &d);
+        ~Date();
         void affiche();
 
 };
