@@ -9,7 +9,7 @@ class Date{
         bool checkDate(int j, int m, int a);
 
     public:
-        Date(int j, int m, int a);
+        Date(int j = 1, int m = 1, int a = 2000);
         Date(Date &d);
         ~Date();
         void affiche();
