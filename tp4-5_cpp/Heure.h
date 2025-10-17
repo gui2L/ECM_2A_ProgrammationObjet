@@ -3,7 +3,10 @@
 
 class Heure{
     private:
+        int heures;
+        int minutes;
     public:
+        Heure(int h = 0, int min = 0);
 
 };
 #endif
