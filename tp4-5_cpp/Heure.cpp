@@ -6,8 +6,22 @@ Heure::Heure(int h, int min):heures(h), minutes(min){
 
 Heure::~Heure(){}
 
-void Heure::affiche(){ //modifier si 0h ou 0min
-    std::cout<< heures <<"h "<< minutes << "min" <<"\n";
+void Heure::affiche(){ 
+    if (heures != 0){
+        std::cout<< heures <<"h ";
+    }else{
+        if (heures % 24 == 0){
+            std::cout<< "00h ";
+        }else{
+
+        }
+        
+    }
+
+    if (minutes != 0){
+        std::cout<< minutes << "min";
+    } 
+    std::cout<<"\n";
 }
 
 int Heure::getHeures(){return heures;}
