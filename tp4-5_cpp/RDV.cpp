@@ -64,9 +64,14 @@ void RDV::saisie(){
         if (ss.fail()) {
             std::cout << "Format de date invalide, veuillez reessayer " << "\n";
         } else {
-            Date d(jour, mois, annee);
-            setDate(d);
-            break;
+            if(Date::public_checkDate(jour, mois, annee)){
+                Date d(jour, mois, annee);
+                setDate(d);
+                break;
+            }else{
+                std::cout << "Date invalide, veuillez reessayer " << "\n";
+            }
+            
         }
     }
     
@@ -119,4 +124,9 @@ void RDV::setParticipants(std::string* ps){
 
 void RDV::setParticipant(int i, std::string s){
     participants[i] = s;
+}
+
+bool RDV::estCompatibleAvec(RDV r){
+
+    return 0;
 }
