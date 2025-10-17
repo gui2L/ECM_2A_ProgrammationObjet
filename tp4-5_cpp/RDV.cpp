@@ -21,3 +21,13 @@ void RDV::affiche(){
 RDV::~RDV(){
     delete[] participants;
 }
+
+void RDV::saisieParticipants(){
+    for (int i = 0; i < nb_participants; i++){
+        std::string p;
+        std::cout<< "rentrez un participant :";
+        std::cin>> p;
+        participants[i] = p;
+    }
+         
+}
