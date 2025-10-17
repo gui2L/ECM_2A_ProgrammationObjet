@@ -83,6 +83,31 @@ void RDV::saisie(){
     setNb_participants(nb_p);
 
     saisieParticipants();
-    
 
+}
+
+void RDV::setDate(const Date& dateRdv){
+    d = dateRdv;
+}
+
+void RDV::setHeure(const Heure& heureRdv){
+    h = heureRdv;
+} 
+
+void RDV::setLieu(const std::string& lieuRdv){
+    lieu = lieuRdv;
+}  
+
+void RDV::setNb_participants(int nb_participants){
+    this->nb_participants = nb_participants;
+} 
+
+void RDV::setParticipants(std::string* ps){
+    for (int i = 0; i < nb_participants; i++) {
+        participants[i] = ps[i];
+    }
+}  
+
+void RDV::setParticipant(int i, std::string s){
+    participants[i] = s;
 }
