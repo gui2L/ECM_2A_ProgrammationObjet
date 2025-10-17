@@ -10,5 +10,11 @@ class Heure{
         ~Heure();
         void affiche();
 
+        int getHeures();
+        int getMinutes();
+
+        void setHeures(int h);
+        void setMinutes(int min);
+
 };
 #endif

@@ -2,6 +2,7 @@
 #include "Heure.h"
 
 #include <iostream>
+#include <cassert> //for better testing
 
 
 int main(){
@@ -34,9 +35,24 @@ int main(){
     Heure h1;
     Heure h2(1);
     Heure h3(23, 17);
-    h1.affiche();
-    h2.affiche();
-    h3.affiche();
+    std::cout<<"heure h1 : "; h1.affiche();
+    std::cout<<"heure h2 : "; h2.affiche();
+    std::cout<<"heure h3 : "; h3.affiche();
+
+    std::cout<<"\n";
+    
+    Heure h4(12, 15);
+    std::cout<<"heure h4 avant modif: "; h4.affiche();
+    std::cout<<"heures de h4 : " << h4.getHeures() << "\n"; 
+    std::cout<<"minutes de h4 : " << h4.getMinutes() << "\n";
+
+    h4.setHeures(14);
+    h4.setMinutes(0);
+    std::cout<<"heure h4 apres modif: "; h4.affiche();
+    std::cout<<"heures de h4 : " << h4.getHeures() << "\n"; 
+    std::cout<<"minutes de h4 : " << h4.getMinutes() << "\n";
+    
+
 
 
 
