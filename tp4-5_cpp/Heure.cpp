@@ -11,7 +11,7 @@ void Heure::affiche(){
         std::cout<< heures <<"h";
     }else{
         if (heures % 24 == 0){
-            std::cout<< "00:";
+            std::cout<< "00h";
         }else{
         }
         

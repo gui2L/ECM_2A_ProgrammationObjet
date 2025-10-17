@@ -11,8 +11,8 @@ class RDV {
     private:
         Date d;
         Heure h;
-        std::string lieu = "";
-        int nb_participants = 0;
+        std::string lieu;
+        int nb_participants;
         std::string *participants;
 
     public:

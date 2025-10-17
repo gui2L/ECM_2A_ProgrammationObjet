@@ -4,6 +4,8 @@
 
 
 RDV::RDV() : d(), h(){
+    lieu = "";
+    nb_participants = 0;
     participants = new std::string[10];
 }
 
@@ -18,7 +20,7 @@ void RDV::affiche(){
             if (i < nb_participants - 1) std::cout << ", ";
         }
     }else{
-        if(nb_participants = 1){
+        if(nb_participants == 1){
             std::cout<< "avec " << participants[0];
         }
     }
