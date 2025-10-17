@@ -8,18 +8,17 @@ Heure::~Heure(){}
 
 void Heure::affiche(){ 
     if (heures != 0){
-        std::cout<< heures <<"h ";
+        std::cout<< heures <<": ";
     }else{
         if (heures % 24 == 0){
-            std::cout<< "00h ";
+            std::cout<< "00: ";
         }else{
-
         }
         
     }
 
     if (minutes != 0){
-        std::cout<< minutes << "min";
+        std::cout<< minutes;
     } 
     std::cout<<"\n";
 }
