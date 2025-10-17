@@ -14,6 +14,14 @@ class Date{
         ~Date();
         void affiche();
 
+        int getJour();
+        int getMois();
+        int getAnnee();
+
+        void setJour(int j);
+        void setMois(int m);
+        void setAnnee(int a);
+
 };
 
 #endif

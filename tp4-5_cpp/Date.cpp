@@ -19,9 +19,29 @@ Date::Date(Date &d):jour(d.jour), mois(d.mois), annee(d.annee){
 }
 
 Date::~Date(){
-    
+
 }
 
 void Date::affiche(){
     std::cout<< jour << " / " << mois << " / " << annee << "\n"; 
+}
+
+int Date::getJour(){
+    return jour;
+}
+int Date::getMois(){
+    return mois;
+}
+int Date::getAnnee(){
+    return annee;
+}
+
+void Date::setJour(int j){
+    jour = j;
+}
+void Date::setMois(int m){
+    mois = m;
+}
+void Date::setAnnee(int a){
+    annee = a;
 }
