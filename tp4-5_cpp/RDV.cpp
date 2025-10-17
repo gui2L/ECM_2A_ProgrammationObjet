@@ -31,3 +31,10 @@ void RDV::saisieParticipants(){
     }
          
 }
+
+void RDV::saisieLieu(){
+    std::string l;
+    std::cout<< "rentrez le lieu du rdv :";
+    std::cin>> l;
+    lieu = l;
+}
