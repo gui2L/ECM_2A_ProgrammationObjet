@@ -11,12 +11,13 @@ class RDV {
     private:
         Date d;
         Heure h;
-        std::string lieu;
-        int nb_participants;
+        std::string lieu = "";
+        int nb_participants = 0;
         std::string *participants;
 
     public:
-        RDV(int nb_particpants = 0, std::string *ps = new std::string[10]);
+        RDV();
+        ~RDV();
         void affiche();
         void saisieParticipants();
         void saisieLieu(); 

@@ -56,8 +56,10 @@ int main(){
     std::cout<<"heures de h4 : " << h4.getHeures() << "\n"; assert(h4.getHeures() == 14);
     std::cout<<"minutes de h4 : " << h4.getMinutes() << "\n"; assert(h4.getMinutes() == 0);
     
+    std::cout<<"\n";
 
-
+    RDV r1;
+    r1.affiche();
 
 
     return 0;
