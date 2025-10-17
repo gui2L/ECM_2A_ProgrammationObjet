@@ -23,7 +23,15 @@ Date::~Date(){
 }
 
 void Date::affiche(){
-    std::cout<< jour << " / " << mois << " / " << annee << "\n"; 
+    
+    std::cout<< jour << "/"; 
+    if (mois <=9){
+        std::cout<< "0" << mois << "/"; 
+    }else{
+        std::cout<< mois << "/"; 
+    }
+    
+    std::cout<< annee << "\n"; 
 }
 
 int Date::getJour(){
