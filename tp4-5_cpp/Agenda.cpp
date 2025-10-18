@@ -30,15 +30,20 @@ Agenda::~Agenda() {
 void Agenda::ajoute(const RDV &r) {
     NoeudRDV *nouveau = new NoeudRDV(r);
 
-    if (premier == nullptr) {
-        premier = nouveau; // premier élément
-    } else {
-        NoeudRDV *courant = premier;
-        while (courant->getSuivant() != nullptr) {
-            courant = courant->getSuivant();
-        }
-        courant->setSuivant(nouveau);
+    if (premier == nullptr || premier->getRDV().estSuperieurA(r)) {
+        nouveau->setSuivant(premier);
+        premier = nouveau;
+        return;
     }
+
+    NoeudRDV *courant = premier;
+    while (courant->getSuivant() != nullptr &&
+           courant->getSuivant()->getRDV().estSuperieurA(r) == false) {
+        courant = courant->getSuivant();
+    }
+
+    nouveau->setSuivant(courant->getSuivant());
+    courant->setSuivant(nouveau);
 }
 
 void Agenda::affiche() const {
@@ -56,14 +61,26 @@ void Agenda::affiche() const {
     }
 }
 
-void Agenda::enleve() {
-    if (premier == nullptr) {
-        std::cout << "Agenda vide, rien a enlever.\n";
+void Agenda::enleve(const RDV &r) {
+    if (premier == nullptr) return;
+
+    if (premier->getRDV().estEgale(r)) {
+        NoeudRDV *temp = premier;
+        premier = premier->getSuivant();
+        delete temp;
         return;
     }
 
-    NoeudRDV *temp = premier;
-    premier = premier->getSuivant();
-    delete temp;
+    NoeudRDV *courant = premier;
+    while (courant->getSuivant() != nullptr &&
+           !courant->getSuivant()->getRDV().estEgale(r)) {
+        courant = courant->getSuivant();
+    }
+
+    if (courant->getSuivant() != nullptr) {
+        NoeudRDV *temp = courant->getSuivant();
+        courant->setSuivant(temp->getSuivant());
+        delete temp;
+    }
 }
 

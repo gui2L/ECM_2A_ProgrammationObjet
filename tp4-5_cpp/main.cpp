@@ -30,23 +30,28 @@ int main(){
     assert(n1.getSuivant() == &n2);*/
     
     RDV r1, r2, r3;
-    r1.setLieu("Bureau");
-    r2.setLieu("Maison");
-    r3.setLieu("Coiffeur");
+    r1.setLieu("Bureau"); r1.setDate(Date(10, 10, 2025));
+    r1.setHeure(Heure(9, 30));
+
+    r2.setLieu("Maison");r2.setDate(Date(9, 10, 2025));
+    r2.setHeure(Heure(11, 0));
+
+    r3.setLieu("Coiffeur");r3.setDate(Date(10, 10, 2025));
+    r3.setHeure(Heure(8, 0));
+
     Agenda a;
     a.ajoute(r1);
     a.ajoute(r2);
-    a.affiche();
-    a.enleve();
-    std::cout << "Apres suppression du premier rdv :\n";
+    a.ajoute(r3);
+
+    std::cout << "Agenda ordonne\n";
     a.affiche();
 
-    a.ajoute(r3);
-    a.enleve();
-    a.enleve();
-    a.enleve();
-    std::cout << "Contenu de l'agenda a la fin:\n";
+    std::cout << "Suppression d'un RDV\n";
+    a.enleve(r2);
     a.affiche();
+
+    
 
     return 0;
 }

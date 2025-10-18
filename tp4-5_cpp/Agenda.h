@@ -15,7 +15,7 @@ public:
     ~Agenda();                  
 
     void ajoute(const RDV &r);    
-    void enleve();                  
+    void enleve(const RDV &r);                  
     void affiche() const;      
 };
 
