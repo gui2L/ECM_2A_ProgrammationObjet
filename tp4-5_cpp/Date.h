@@ -8,7 +8,15 @@ class Date{
         int annee;
 
         static bool checkDate(int j, int m, int a){
-            return ((j >= 1 && j <= 31) && (m >= 1 && m <= 12) && (a >= 2000 && a <= 2050));
+            if (a < 2000 || a > 2050 || m < 1 || m > 12 || j < 1)
+                return false;
+
+            int joursParMois[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+            bool bissextile = (a % 4 == 0 && (a % 100 != 0 || a % 400 == 0));
+            if (bissextile) joursParMois[1] = 29;
+
+            return j <= joursParMois[m - 1];
         }
 
     public:
