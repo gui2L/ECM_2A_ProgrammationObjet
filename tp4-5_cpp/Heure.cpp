@@ -4,6 +4,9 @@
 Heure::Heure(int h, int min):heures(h), minutes(min){
 }
 
+Heure::Heure(const Heure &h) : heures(h.heures), minutes(h.minutes){
+}
+
 Heure::~Heure(){}
 
 void Heure::affiche(){ 

@@ -21,7 +21,7 @@ class Date{
 
     public:
         Date(int j = 1, int m = 1, int a = 2000);
-        Date(Date &d);
+        Date(const Date &d);
         ~Date();
         void affiche();
 

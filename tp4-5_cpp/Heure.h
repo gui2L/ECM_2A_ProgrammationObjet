@@ -13,6 +13,7 @@ class Heure{
 
     public:
         Heure(int h = 0, int min = 0);
+        Heure(const Heure &h);
         ~Heure();
         void affiche();
 

@@ -12,7 +12,7 @@ Date::Date(int j, int m, int a){
     }
 }
 
-Date::Date(Date &d):jour(d.jour), mois(d.mois), annee(d.annee){
+Date::Date(const Date &d):jour(d.jour), mois(d.mois), annee(d.annee){
 }
 
 Date::~Date(){
