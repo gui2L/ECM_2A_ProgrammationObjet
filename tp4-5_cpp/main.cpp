@@ -3,14 +3,14 @@
 #include "RDV.h"
 
 #include <iostream>
-#include <cassert> //for better testing
+#include <cassert> 
 
 
 
 
 int main(){
 
-    //tests class Date
+    //----------tests class Date----------
     Date d1(0, 0, 0);
     Date d2(17, 10, 2025);
     Date d3 = d2;
@@ -37,7 +37,7 @@ int main(){
 
     std::cout<<"\n";
 
-    //tests class Heure
+    //----------tests class Heure----------
     Heure h1;
     Heure h2(1);
     Heure h3(23, 17);
@@ -60,7 +60,7 @@ int main(){
     
     std::cout<<"\n";
 
-    //tests class RDV
+    //----------tests class RDV----------
     RDV r1;
     r1.affiche();
     //r1.saisieLieu();
