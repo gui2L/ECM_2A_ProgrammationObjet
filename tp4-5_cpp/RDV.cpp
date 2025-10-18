@@ -126,7 +126,7 @@ void RDV::setParticipant(int i, std::string s){
     participants[i] = s;
 }
 
-bool RDV::estCompatibleAvec(RDV r){
+bool RDV::estCompatibleAvec(const RDV &r){
     if(d.estEgale(r.d)){
         if(h.estEgale(r.h)){
             return 0;

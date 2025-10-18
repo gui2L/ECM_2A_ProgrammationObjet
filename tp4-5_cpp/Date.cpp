@@ -51,6 +51,6 @@ void Date::setAnnee(int a){
     annee = a;
 }
 
-bool Date::estEgale(Date &d){
-    return (jour == d.getJour() && mois == d.getMois() && annee == d.getAnnee());
+bool Date::estEgale(const Date &d){
+    return (jour == d.jour && mois == d.mois && annee == d.annee);
 }

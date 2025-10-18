@@ -29,7 +29,7 @@ class Date{
         void setMois(int m);
         void setAnnee(int a);
 
-        bool estEgale(Date &d);
+        bool estEgale(const Date &d);
 
 };
 

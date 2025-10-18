@@ -34,6 +34,6 @@ int Heure::getMinutes(){return minutes;}
 void Heure::setHeures(int h){heures=h;}
 void Heure::setMinutes(int min){minutes=min;}
 
-bool Heure::estEgale(Heure &h){
-    return (heures == h.getHeures() && minutes == h.getMinutes());
+bool Heure::estEgale(const Heure &h){
+    return (heures == h.heures && minutes == h.minutes);
 }
