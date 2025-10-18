@@ -18,12 +18,26 @@ Agenda::Agenda(const Agenda &a) : premier(nullptr) {
 }
 
 Agenda::~Agenda() {
-    NoeudRDV* courant = premier;
+    NoeudRDV*courant = premier;
     while (courant != nullptr) {
         NoeudRDV* suivant = courant->getSuivant();
         delete courant;
         courant = suivant;
     }
     premier = nullptr;
+}
+
+void Agenda::ajoute(const RDV &r) {
+    NoeudRDV *nouveau = new NoeudRDV(r);
+
+    if (premier == nullptr) {
+        premier = nouveau; // premier élément
+    } else {
+        NoeudRDV *courant = premier;
+        while (courant->getSuivant() != nullptr) {
+            courant = courant->getSuivant();
+        }
+        courant->setSuivant(nouveau);
+    }
 }
 
