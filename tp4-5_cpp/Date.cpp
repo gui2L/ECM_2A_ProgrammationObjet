@@ -50,3 +50,7 @@ void Date::setMois(int m){
 void Date::setAnnee(int a){
     annee = a;
 }
+
+bool Date::estEgale(Date &d){
+    return (jour == d.getJour() && mois == d.getMois() && annee == d.getAnnee());
+}

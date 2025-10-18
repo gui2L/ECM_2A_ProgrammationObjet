@@ -16,5 +16,7 @@ class Heure{
         void setHeures(int h);
         void setMinutes(int min);
 
+        bool estEgale(Heure &h);
+
 };
 #endif

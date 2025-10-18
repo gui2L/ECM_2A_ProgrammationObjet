@@ -127,6 +127,13 @@ void RDV::setParticipant(int i, std::string s){
 }
 
 bool RDV::estCompatibleAvec(RDV r){
-
-    return 0;
+    if(d.estEgale(r.d)){
+        if(h.estEgale(r.h)){
+            return 0;
+        }else{
+            return 1;
+        }
+    }else{
+        return 1;
+    }
 }
