@@ -36,7 +36,9 @@ int main(){
     a.ajoute(r1);
     a.ajoute(r2);
     a.affiche();
-    
+    a.enleve();
+    std::cout << "Apres suppression du premier rdv :\n";
+    a.affiche();
 
     return 0;
 }

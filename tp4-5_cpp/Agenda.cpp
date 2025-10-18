@@ -56,3 +56,13 @@ void Agenda::affiche() const {
     }
 }
 
+void Agenda::enleve() {
+    if (premier == nullptr) {
+        std::cout << "Agenda vide, rien a enlever.\n";
+    }
+
+    NoeudRDV *temp = premier;
+    premier = premier->getSuivant();
+    delete temp;
+}
+
