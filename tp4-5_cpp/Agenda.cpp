@@ -84,3 +84,13 @@ void Agenda::enleve(const RDV &r) {
     }
 }
 
+void Agenda::vider() {
+    NoeudRDV *courant = premier;
+    while (courant != nullptr) {
+        NoeudRDV *suivant = courant->getSuivant();
+        delete courant;
+        courant = suivant;
+    }
+    premier = nullptr;
+}
+

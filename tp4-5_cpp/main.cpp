@@ -44,12 +44,18 @@ int main(){
     a.ajoute(r2);
     a.ajoute(r3);
 
-    std::cout << "Agenda ordonne\n";
+    std::cout << "Agenda ordonne:\n";
     a.affiche();
 
-    std::cout << "Suppression d'un RDV\n";
+    std::cout << "Suppression d'un RDV:\n";
     a.enleve(r2);
     a.affiche();
+
+    a.vider();
+    std::cout << "Agenda sans rdv:\n";
+    a.affiche();
+
+
 
     
 
