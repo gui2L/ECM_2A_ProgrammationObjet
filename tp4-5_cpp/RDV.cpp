@@ -9,6 +9,19 @@ RDV::RDV() : d(), h(){
     participants = new std::string[10];
 }
 
+RDV::RDV(const RDV &r) : lieu(r.lieu), nb_participants(r.nb_participants), 
+                         participants(new std::string[nb_participants]),   
+                         h(r.h), d(r.d){
+
+    for (int i = 0; i < nb_participants; i++) {
+        participants[i] = r.participants[i];
+    }
+}
+
+RDV::~RDV(){
+    delete[] participants;
+}
+
 void RDV::affiche(){
     std::cout<< "RDV --> " << lieu << "\n"; 
     std::cout<< "le "; d.affiche();
@@ -26,10 +39,6 @@ void RDV::affiche(){
     }
     std::cout<<"\n";
     
-}
-
-RDV::~RDV(){
-    delete[] participants;
 }
 
 void RDV::saisieParticipants(){

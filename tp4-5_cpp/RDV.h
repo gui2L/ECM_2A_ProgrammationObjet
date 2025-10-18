@@ -17,6 +17,7 @@ class RDV {
 
     public:
         RDV();
+        RDV(const RDV &r);
         ~RDV();
         void affiche();
         void saisieParticipants();
