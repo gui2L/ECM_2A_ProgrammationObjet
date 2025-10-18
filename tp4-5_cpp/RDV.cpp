@@ -151,3 +151,14 @@ bool RDV::estCompatibleAvec(const RDV &r){
         return 1;
     }
 }
+
+bool RDV::estEgale(const RDV &r) const {
+    return d.estEgale(r.d) && h.estEgale(r.h);
+}
+
+bool RDV::estSuperieurA(const RDV &r) const {
+    if (d.estEgale(r.d))
+        return h.estSuperieureA(r.h);
+    else
+        return d.estSuperieureA(r.d);
+}

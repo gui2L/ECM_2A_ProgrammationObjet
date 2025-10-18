@@ -26,7 +26,7 @@ class Heure{
         static bool public_checkHeure(int heures, int minutes){
             return checkHeure(heures, minutes);
         }
-        bool estEgale(const Heure &h);
+        bool estEgale(const Heure &h) const;
         bool estSuperieureA(const Heure &h) const;
 
 };

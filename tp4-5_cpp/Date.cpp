@@ -51,7 +51,7 @@ void Date::setAnnee(int a){
     annee = a;
 }
 
-bool Date::estEgale(const Date &d){
+bool Date::estEgale(const Date &d) const{
     return (jour == d.jour && mois == d.mois && annee == d.annee);
 }
 

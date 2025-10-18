@@ -37,7 +37,7 @@ class Date{
         void setMois(int m);
         void setAnnee(int a);
 
-        bool estEgale(const Date &d);
+        bool estEgale(const Date &d) const;
         bool estSuperieureA(const Date &d) const;
 
 };
