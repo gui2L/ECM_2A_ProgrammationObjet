@@ -41,3 +41,18 @@ void Agenda::ajoute(const RDV &r) {
     }
 }
 
+void Agenda::affiche() const {
+    if (premier == nullptr) {
+        std::cout << "Agenda vide.\n";
+    }
+
+    NoeudRDV *courant = premier;
+    int i = 1;
+    while (courant != nullptr) {
+        std::cout << "RDV #" << i << " :\n";
+        courant->getRDV().affiche();
+        courant = courant->getSuivant();
+        i++;
+    }
+}
+

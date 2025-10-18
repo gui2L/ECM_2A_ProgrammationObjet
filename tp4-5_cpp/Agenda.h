@@ -16,7 +16,7 @@ public:
 
     void ajoute(const RDV &r);    
     void enleve();                  
-    void affiche();      
+    void affiche() const;      
 };
 
 #endif

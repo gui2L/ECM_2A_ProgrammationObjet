@@ -32,9 +32,11 @@ int main(){
     RDV r1, r2;
     r1.setLieu("Bureau");
     r2.setLieu("Maison");
-    Agenda agenda;
-    agenda.ajoute(r1);
-    agenda.ajoute(r2);
+    Agenda a;
+    a.ajoute(r1);
+    a.ajoute(r2);
+    a.affiche();
+    
 
     return 0;
 }
