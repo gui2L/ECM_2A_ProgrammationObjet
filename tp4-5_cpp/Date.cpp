@@ -54,3 +54,9 @@ void Date::setAnnee(int a){
 bool Date::estEgale(const Date &d){
     return (jour == d.jour && mois == d.mois && annee == d.annee);
 }
+
+bool Date::estSuperieureA(const Date &d) const {
+    if (annee != d.annee) return annee > d.annee;
+    if (mois != d.mois) return mois > d.mois;
+    return jour > d.jour;
+}

@@ -40,3 +40,8 @@ void Heure::setMinutes(int min){minutes=min;}
 bool Heure::estEgale(const Heure &h){
     return (heures == h.heures && minutes == h.minutes);
 }
+
+bool Heure::estSuperieureA(const Heure &h) const {
+    if (heures != h.heures) return heures > h.heures;
+    return minutes > h.minutes;
+}

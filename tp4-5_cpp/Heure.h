@@ -27,6 +27,7 @@ class Heure{
             return checkHeure(heures, minutes);
         }
         bool estEgale(const Heure &h);
+        bool estSuperieureA(const Heure &h) const;
 
 };
 #endif

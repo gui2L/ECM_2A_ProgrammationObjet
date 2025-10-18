@@ -38,6 +38,7 @@ class Date{
         void setAnnee(int a);
 
         bool estEgale(const Date &d);
+        bool estSuperieureA(const Date &d) const;
 
 };
 
