@@ -85,9 +85,14 @@ void RDV::saisie(){
         if (ss.fail()) {
             std::cout << "Format de l'heure invalide, veuillez reessayer " << "\n";
         } else {
-            Heure h(heures, minutes);
-            setHeure(h);
-            break;
+            if (Heure::public_checkHeure(heures, minutes)){
+                Heure h(heures, minutes);
+                setHeure(h);
+                break;
+            }else{
+                std::cout << "Heure invalide, veuillez reessayer " << "\n";
+            }
+            
         }
     }
 

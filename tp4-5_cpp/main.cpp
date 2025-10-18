@@ -64,8 +64,8 @@ int main(){
     RDV r1;
     r1.affiche();
     //r1.saisieLieu();
-    //r1.saisie();
-    //r1.affiche();
+    r1.saisie();
+    r1.affiche();
 
 
     Date d_rdv1(10, 10, 2010); Date d_rdv2(7, 12, 2010);
