@@ -29,15 +29,23 @@ int main(){
     assert(n2.getSuivant() == &n1);
     assert(n1.getSuivant() == &n2);*/
     
-    RDV r1, r2;
+    RDV r1, r2, r3;
     r1.setLieu("Bureau");
     r2.setLieu("Maison");
+    r3.setLieu("Coiffeur");
     Agenda a;
     a.ajoute(r1);
     a.ajoute(r2);
     a.affiche();
     a.enleve();
     std::cout << "Apres suppression du premier rdv :\n";
+    a.affiche();
+
+    a.ajoute(r3);
+    a.enleve();
+    a.enleve();
+    a.enleve();
+    std::cout << "Contenu de l'agenda a la fin:\n";
     a.affiche();
 
     return 0;

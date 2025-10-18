@@ -59,6 +59,7 @@ void Agenda::affiche() const {
 void Agenda::enleve() {
     if (premier == nullptr) {
         std::cout << "Agenda vide, rien a enlever.\n";
+        return;
     }
 
     NoeudRDV *temp = premier;
