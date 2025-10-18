@@ -3,6 +3,7 @@
 #include "RDV.h"
 #include "NoeudRDV.h"
 #include "test_fonctions.h"
+#include "Agenda.h"
 
 #include <iostream>
 #include <cassert> 
@@ -28,6 +29,7 @@ int main(){
     assert(n2.getSuivant() == &n1);
     assert(n1.getSuivant() == &n2);
     
+    Agenda agenda;
 
     return 0;
 }
