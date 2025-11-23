@@ -1,7 +1,7 @@
 #include "Personne.h"
 
 Personne::Personne(std::string nom, std::string prenom, std::string adresse, std::string telephone) 
-: nom(nom), prenom(prenom){}
+: nom(nom), prenom(prenom), adresse(adresse), telephone(telephone){}
 
 Personne::~Personne()
 {
@@ -12,6 +12,7 @@ void Personne::affiche() const{
     std::cout << "Prenom : " << prenom << "\n";
     std::cout << "Adresse : " << adresse << "\n";
     std::cout << "Telephone : " << telephone << "\n";
+    std::cout << "\n";
 }
 
 std::string Personne::getNom() const{
