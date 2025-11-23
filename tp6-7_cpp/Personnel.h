@@ -12,7 +12,7 @@ public:
     
     ~Personnel();
 
-    float calculSalaire() const;
+    virtual float calculSalaire() const;
 
     void affiche() const;
 

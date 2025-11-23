@@ -7,7 +7,7 @@ ListePersonnel::ListePersonnel() : nb(0) {
     }
 }
 
-void ListePersonnel::ajoutPersonnel(Personnel* ptPersonnel) {
+void ListePersonnel::ajoutPersonnel(Personnel *ptPersonnel) {
     if (nb < 100) { 
         tab[nb] = ptPersonnel;
         nb++;
@@ -17,7 +17,7 @@ void ListePersonnel::ajoutPersonnel(Personnel* ptPersonnel) {
 }
 
 void ListePersonnel::afficherSalaires() const {
-    std::cout << "\n--- Affichage des salaires de la liste ---" << "\n";
+    std::cout << "\n__Affichage des salaires de la liste__" << "\n";
     for (int i = 0; i < nb; ++i) {
         float salaire = tab[i]->calculSalaire(); 
         

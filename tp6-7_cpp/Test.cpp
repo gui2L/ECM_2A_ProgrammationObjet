@@ -4,6 +4,7 @@
 #include "PersonnelAdmin.h" 
 #include "EnseignantPermanent.h"
 #include "EnseignantVacataire.h"
+#include "ListePersonnel.h"
 
 #include <iostream>
 
@@ -59,11 +60,35 @@ int main(){
     enseignantvac1.affiche();
     std::cout << "\n";
 
-    std::cout << "  __Test méthode calculSalaire__" << "\n";
-    std::cout << "Salaire Personnel : " << personel1.calculSalaire() << "\n";
-    std::cout << "Salaire Admin : " << personeladmin1.calculSalaire() << "\n";
-    std::cout << "Salaire EP : " << enseignantperm1.calculSalaire() << "\n";
-    std::cout << "Salaire EV : " << enseignantvac1.calculSalaire() << "\n";
+    Personnel* personnel1 = new Personnel("Dupont", "Marie",2000); 
     
+    PersonnelAdmin* pAdmin = new PersonnelAdmin("Lefevre", "Jean", 1800, 15, 10);
+    
+    EnseignantPermanent* pEP = new EnseignantPermanent("Dubois", "Luc", 3500, 3, 50);
+    
+    EnseignantVacataire* pEV = new EnseignantVacataire("Leroy", "Sophie", 50, "A12", 40);
+
+
+    std::cout << "  __Test methode calculSalaire__" << "\n";
+    std::cout << "Salaire Personnel : " << personnel1->calculSalaire() << "\n";
+    std::cout << "Salaire Admin : " << pAdmin->calculSalaire() << "\n";
+    std::cout << "Salaire EP : " << pEP->calculSalaire() << "\n";
+    std::cout << "Salaire EV : " << pEV->calculSalaire() << "\n";
+    // salaires corrects car méthode fille appelée
+    
+
+    ListePersonnel maListe;
+    maListe.ajoutPersonnel(personnel1);
+    maListe.ajoutPersonnel(pAdmin);
+    maListe.ajoutPersonnel(pEP);
+    maListe.ajoutPersonnel(pEV);
+    maListe.afficherSalaires();
+    // si la méthode calculSalaire() de la classe Personnel est non virtuel, tous les salaires sont ceux de base car le compilateur utilise la méthode 'calculSalaire()' de la classe Personnel (la mère) à travers le pointeur Personnel*
+
+    delete personnel1;
+    delete pAdmin;
+    delete pEP;
+    delete pEV;
+
     return 0;
 }

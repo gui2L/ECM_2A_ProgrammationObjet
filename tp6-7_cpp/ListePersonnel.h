@@ -10,7 +10,7 @@ private:
 
 public:
     ListePersonnel();
-    void ajoutPersonnel(Personnel* ptPersonnel); 
+    void ajoutPersonnel(Personnel *ptPersonnel); 
     void afficherSalaires() const; 
 };
 
