@@ -31,6 +31,8 @@ g++ *cpp -o programme.exe
 
 ### License : 
 
+Ce répertoire est distribué sous la licence MIT License © 2025 Guillaume Surleau - Centrale Méditerranée.
+
 --- 
 
 ### Auteur :
