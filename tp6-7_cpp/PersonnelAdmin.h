@@ -9,7 +9,7 @@ private:
     float taux;
 
 public:
-    PersonnelAdmin(std::string nom, std::string prenom, float taux, int heuresSup = 0);
+    PersonnelAdmin(std::string nom, std::string prenom, float taux, std::string adresse = "", std::string telephone = "", float salaire = 0, int heuresSup = 0);
 
     float calculSalaire() const; 
 

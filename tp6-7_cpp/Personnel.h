@@ -4,11 +4,11 @@
 #include "Personne.h" 
 
 class Personnel : public Personne{
-private:
+protected:
     float salaire;
 
 public:
-    Personnel(std::string nom, std::string prenom, float salaire = 0);
+    Personnel(std::string nom, std::string prenom, std::string adresse = "", std::string telephone = "", float salaire = 0);
     
     ~Personnel();
 

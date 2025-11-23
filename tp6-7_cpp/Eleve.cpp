@@ -1,7 +1,7 @@
 #include "Eleve.h"
 
-Eleve::Eleve(std::string nom, std::string prenom, std::string promotion, std::string groupeTD, float GPA) 
-: Personne(nom, prenom), promotion(promotion), groupeTD(groupeTD), GPA(GPA){}
+Eleve::Eleve(std::string nom, std::string prenom, std::string adresse, std::string telephone, std::string promotion, std::string groupeTD, float GPA) 
+: Personne(nom, prenom, adresse, telephone), promotion(promotion), groupeTD(groupeTD), GPA(GPA){}
 
 
 Eleve::~Eleve(){}

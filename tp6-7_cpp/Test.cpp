@@ -1,6 +1,7 @@
 #include "Personne.h"
 #include "Eleve.h"
 #include "Personnel.h"
+#include "PersonnelAdmin.h" 
 
 #include <iostream>
 
@@ -38,5 +39,10 @@ int main(){
     personel1.setSalaire(3000);
     personel1.affiche();
 
+    std::cout << "  __Test class PersonnelAdmin__" << "\n";
+    PersonnelAdmin personeladmin1("X", "Y", 15);
+    personeladmin1.setSalaire(2000);
+    personeladmin1.setHeuresSup(10);
+    personeladmin1.affiche();
     return 0;
 }

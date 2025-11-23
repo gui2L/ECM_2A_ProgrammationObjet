@@ -9,7 +9,7 @@ class Eleve : public Personne{
         std::string groupeTD;
         float GPA;
     public:
-        Eleve(std::string nom, std::string prenom, std::string promotion = "", std::string groupeTD = "", float GPA = -1);
+        Eleve(std::string nom, std::string prenom, std::string adresse="", std::string telephone="",  std::string promotion = "", std::string groupeTD = "", float GPA = -1);
         ~Eleve();
         void affiche() const;
 
