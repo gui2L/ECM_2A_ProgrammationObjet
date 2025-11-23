@@ -3,6 +3,7 @@
 #include "Personnel.h"
 #include "PersonnelAdmin.h" 
 #include "EnseignantPermanent.h"
+#include "EnseignantVacataire.h"
 
 #include <iostream>
 
@@ -51,5 +52,7 @@ int main(){
     enseignantperm1.affiche();
 
     std::cout << "  __Test class EnseignantVacataire__" << "\n";
+    EnseignantVacataire enseignantvac1("A", "B", 3000, "04", 17);
+    enseignantvac1.affiche();
     return 0;
 }
