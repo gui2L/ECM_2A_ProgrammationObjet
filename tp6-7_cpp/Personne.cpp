@@ -1,6 +1,6 @@
 #include "Personne.h"
 
-Personne::Personne(std::string nom, std::string prenom, std::string adresse = "", std::string telephone = "") 
+Personne::Personne(std::string nom, std::string prenom, std::string adresse, std::string telephone) 
 : nom(nom), prenom(prenom){}
 
 Personne::~Personne()
