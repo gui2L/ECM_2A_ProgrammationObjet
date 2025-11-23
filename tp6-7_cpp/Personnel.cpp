@@ -1,7 +1,7 @@
 #include "Personnel.h"
 
 
-Personnel::Personnel(std::string nom, std::string prenom, std::string adresse, std::string telephone, float salaire)
+Personnel::Personnel(std::string nom, std::string prenom, float salaire, std::string adresse, std::string telephone)
 : Personne(nom, prenom, adresse, telephone), salaire(salaire){}
 
 Personnel::~Personnel() {}

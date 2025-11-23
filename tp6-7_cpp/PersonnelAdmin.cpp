@@ -1,7 +1,7 @@
 #include "PersonnelAdmin.h" 
 
-PersonnelAdmin::PersonnelAdmin(std::string nom, std::string prenom, float taux, std::string adresse, std::string telephone, float salaire, int heuresSup)
-: Personnel(nom, prenom, adresse, telephone, salaire), taux(taux), heuresSup(heuresSup)
+PersonnelAdmin::PersonnelAdmin(std::string nom, std::string prenom, float taux, float salaire, int heuresSup, std::string adresse, std::string telephone)
+: Personnel(nom, prenom, salaire, adresse, telephone), taux(taux), heuresSup(heuresSup)
 {}
 
 float PersonnelAdmin::calculSalaire() const {

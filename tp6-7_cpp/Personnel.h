@@ -8,7 +8,7 @@ protected:
     float salaire;
 
 public:
-    Personnel(std::string nom, std::string prenom, std::string adresse = "", std::string telephone = "", float salaire = 0);
+    Personnel(std::string nom, std::string prenom, float salaire, std::string adresse = "", std::string telephone = "");
     
     ~Personnel();
 

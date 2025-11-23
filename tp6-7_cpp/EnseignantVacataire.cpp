@@ -1,8 +1,8 @@
 #include "EnseignantVacataire.h"
 #include <iostream>
 
-EnseignantVacataire::EnseignantVacataire(std::string nom, std::string prenom, float salaire, std::string casier, float taux, std::string adresse, std::string telephone, int nbreHeures)
-    : Personnel(nom, prenom, adresse, telephone, salaire), casier(casier), taux(taux), nbreHeures(nbreHeures)
+EnseignantVacataire::EnseignantVacataire(std::string nom, std::string prenom, float salaire, std::string casier, float taux, int nbreHeures, std::string adresse, std::string telephone)
+    : Personnel(nom, prenom, salaire, adresse, telephone), casier(casier), taux(taux), nbreHeures(nbreHeures)
 {}
 
 float EnseignantVacataire::calculSalaire() const {

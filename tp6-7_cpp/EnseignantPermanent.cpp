@@ -2,7 +2,7 @@
 #include <iostream>
 
 EnseignantPermanent::EnseignantPermanent(std::string nom, std::string prenom, float salaire, int grade, float prime, std::string adresse, std::string telephone, std::string bureau)
-: Personnel(nom, prenom, adresse, telephone, salaire), bureau(bureau), grade(grade), primeMensuelle(prime)
+: Personnel(nom, prenom, salaire, adresse, telephone), bureau(bureau), grade(grade), primeMensuelle(prime)
 {}
 
 float EnseignantPermanent::calculSalaire() const {

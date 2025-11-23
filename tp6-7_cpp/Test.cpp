@@ -36,23 +36,27 @@ int main(){
     std::cout << "\n";
 
     std::cout << "  __Test class Personnel__" << "\n";
-    Personnel personel1("X", "Y");
+    Personnel personel1("X", "Y", 1500);
     std::cout << personel1.getSalaire() << "\n";
     personel1.setSalaire(3000);
     personel1.affiche();
+    std::cout << "\n";
 
     std::cout << "  __Test class PersonnelAdmin__" << "\n";
-    PersonnelAdmin personeladmin1("X", "Y", 15);
+    PersonnelAdmin personeladmin1("X", "Y", 15, 2300, 13);
     personeladmin1.setSalaire(2000);
     personeladmin1.setHeuresSup(10);
     personeladmin1.affiche();
+    std::cout << "\n";
 
     std::cout << "  __Test class EnseignantPermanent__" << "\n";
     EnseignantPermanent enseignantperm1("A", "B", 3000, 3, 50);
     enseignantperm1.affiche();
+    std::cout << "\n";
 
     std::cout << "  __Test class EnseignantVacataire__" << "\n";
     EnseignantVacataire enseignantvac1("A", "B", 3000, "04", 17);
     enseignantvac1.affiche();
+    std::cout << "\n";
     return 0;
 }
