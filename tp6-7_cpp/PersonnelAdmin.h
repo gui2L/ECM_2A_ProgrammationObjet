@@ -11,7 +11,7 @@ private:
 public:
     PersonnelAdmin(std::string nom, std::string prenom, float taux, float salaire, int heuresSup = 0, std::string adresse = "", std::string telephone = "");
 
-    float calculSalaire() const; 
+    float calculSalaire() const override; 
 
     void affiche() const;
 

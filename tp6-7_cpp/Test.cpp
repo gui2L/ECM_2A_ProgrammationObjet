@@ -36,12 +36,12 @@ int main(){
     std::cout << e1.getNom() << "\n" << e1.getPrenom() << "\n" << e1.getAdresse() << "\n" << e1.getTelephone() << "\n" << e1.getPromotion() << "\n" << e1.getGroupeTD() << "\n" << e1.getGPA() << "\n";
     std::cout << "\n";
 
-    std::cout << "  __Test class Personnel__" << "\n";
+   /* std::cout << "  __Test class Personnel__" << "\n"; //classe abstraite maintenant
     Personnel personel1("X", "Y", 1500);
     std::cout << personel1.getSalaire() << "\n";
     personel1.setSalaire(3000);
     personel1.affiche();
-    std::cout << "\n";
+    std::cout << "\n";*/
 
     std::cout << "  __Test class PersonnelAdmin__" << "\n";
     PersonnelAdmin personeladmin1("X", "Y", 15, 2300, 13);
@@ -60,7 +60,7 @@ int main(){
     enseignantvac1.affiche();
     std::cout << "\n";
 
-    Personnel* personnel1 = new Personnel("Dupont", "Marie",2000); 
+    //Personnel* personnel1 = new Personnel("Dupont", "Marie",2000); //classe abstraite maintenant
     
     PersonnelAdmin* pAdmin = new PersonnelAdmin("Lefevre", "Jean", 1800, 15, 10);
     
@@ -70,7 +70,7 @@ int main(){
 
 
     std::cout << "  __Test methode calculSalaire__" << "\n";
-    std::cout << "Salaire Personnel : " << personnel1->calculSalaire() << "\n";
+    //std::cout << "Salaire Personnel : " << personnel1->calculSalaire() << "\n"; //classe abstraite maintenant
     std::cout << "Salaire Admin : " << pAdmin->calculSalaire() << "\n";
     std::cout << "Salaire EP : " << pEP->calculSalaire() << "\n";
     std::cout << "Salaire EV : " << pEV->calculSalaire() << "\n";
@@ -78,14 +78,14 @@ int main(){
     
 
     ListePersonnel maListe;
-    maListe.ajoutPersonnel(personnel1);
+    //maListe.ajoutPersonnel(personnel1); //classe abstraite maintenant
     maListe.ajoutPersonnel(pAdmin);
     maListe.ajoutPersonnel(pEP);
     maListe.ajoutPersonnel(pEV);
     maListe.afficherSalaires();
     // si la méthode calculSalaire() de la classe Personnel est non virtuel, tous les salaires sont ceux de base car le compilateur utilise la méthode 'calculSalaire()' de la classe Personnel (la mère) à travers le pointeur Personnel*
 
-    delete personnel1;
+    //delete personnel1; //classe abstraite maintenant
     delete pAdmin;
     delete pEP;
     delete pEV;

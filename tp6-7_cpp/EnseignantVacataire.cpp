@@ -5,7 +5,7 @@ EnseignantVacataire::EnseignantVacataire(std::string nom, std::string prenom, fl
     : Personnel(nom, prenom, salaire, adresse, telephone), casier(casier), taux(taux), nbreHeures(nbreHeures)
 {}
 
-float EnseignantVacataire::calculSalaire() const {
+float EnseignantVacataire::calculSalaire() const{
     return taux * nbreHeures;
 }
 

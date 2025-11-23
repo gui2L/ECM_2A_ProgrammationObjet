@@ -12,7 +12,7 @@ private:
 public:
     EnseignantPermanent(std::string nom, std::string prenom, float salaire, int grade, float prime, std::string adresse="", std::string telephone="", std::string bureau = "");
 
-    float calculSalaire() const; 
+    float calculSalaire() const override; 
     void affiche() const;
 
     
