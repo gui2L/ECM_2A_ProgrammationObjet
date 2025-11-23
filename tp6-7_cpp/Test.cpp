@@ -1,5 +1,6 @@
 #include "Personne.h"
 #include "Eleve.h"
+#include "Personnel.h"
 
 #include <iostream>
 
@@ -31,6 +32,11 @@ int main(){
     std::cout << e1.getNom() << "\n" << e1.getPrenom() << "\n" << e1.getAdresse() << "\n" << e1.getTelephone() << "\n" << e1.getPromotion() << "\n" << e1.getGroupeTD() << "\n" << e1.getGPA() << "\n";
     std::cout << "\n";
 
+    std::cout << "  __Test class Personnel__" << "\n";
+    Personnel personel1("X", "Y");
+    std::cout << personel1.getSalaire() << "\n";
+    personel1.setSalaire(3000);
+    personel1.affiche();
 
     return 0;
 }
