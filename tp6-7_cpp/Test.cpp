@@ -4,6 +4,8 @@
 #include <iostream>
 
 int main(){
+    std::cout << "\n";
+    std::cout << "  __Test class Personne__" << "\n";
     Personne p1("", "");
     p1.affiche();
     p1.setNom("Baker");
@@ -14,9 +16,20 @@ int main(){
 
     Personne p2("Santa", "Claus", "Antartica", "0025122025");
     std::cout << p2.getNom() << "\n" << p2.getPrenom() << "\n" << p2.getAdresse() << "\n" << p2.getTelephone() << "\n";
+    std::cout << "\n";
 
-    Eleve e1("Daft", "Punk");
+    std::cout << "  __Test class Eleve__" << "\n";
+    Eleve e1("Punk", "Daft");
     e1.affiche();
+    e1.setAdresse("AroundTheWorld");
+    e1.setTelephone("0033");
+    e1.setPromotion("1A");
+    e1.setGroupeTD("3");
+    e1.setGPA(4);
+
+    e1.affiche();
+    std::cout << e1.getNom() << "\n" << e1.getPrenom() << "\n" << e1.getAdresse() << "\n" << e1.getTelephone() << "\n" << e1.getPromotion() << "\n" << e1.getGroupeTD() << "\n" << e1.getGPA() << "\n";
+    std::cout << "\n";
 
 
     return 0;
