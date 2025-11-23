@@ -58,5 +58,12 @@ int main(){
     EnseignantVacataire enseignantvac1("A", "B", 3000, "04", 17);
     enseignantvac1.affiche();
     std::cout << "\n";
+
+    std::cout << "  __Test méthode calculSalaire__" << "\n";
+    std::cout << "Salaire Personnel : " << personel1.calculSalaire() << "\n";
+    std::cout << "Salaire Admin : " << personeladmin1.calculSalaire() << "\n";
+    std::cout << "Salaire EP : " << enseignantperm1.calculSalaire() << "\n";
+    std::cout << "Salaire EV : " << enseignantvac1.calculSalaire() << "\n";
+    
     return 0;
 }
