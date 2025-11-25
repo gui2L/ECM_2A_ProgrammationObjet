@@ -1,4 +1,7 @@
 #include "Vector.h"
+#include <iostream>
+
+int Vector::compteur = 0;
 
 Vector::Vector() {
 	taille = 0;
@@ -53,3 +56,13 @@ Vector::Vector(double x1, double x2, double x3, double x4) {
     compteur++;
 }
 
+void Vector::affiche() const {
+    std::cout<<"(";
+    for (int i =0; i < taille; i++){
+        std::cout<<coords[i];
+        if (i != taille -1){
+            std::cout<<",";
+        }
+    }
+    std::cout<<")";
+}

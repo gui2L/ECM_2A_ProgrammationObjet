@@ -15,6 +15,7 @@ public:
     Vector(double x, double y, double z);
     Vector(double x1, double x2, double x3, double x4);
     ~Vector();
+    void affiche() const;
 
     static int getCompteur(){
             return compteur;
