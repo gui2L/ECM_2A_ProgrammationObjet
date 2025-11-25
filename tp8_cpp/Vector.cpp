@@ -57,12 +57,19 @@ Vector::Vector(double x1, double x2, double x3, double x4) {
 }
 
 void Vector::affiche() const {
-    std::cout<<"(";
-    for (int i =0; i < taille; i++){
-        std::cout<<coords[i];
-        if (i != taille -1){
-            std::cout<<",";
+    if (coords != nullptr){
+        std::cout<<"(";
+        for (int i =0; i < taille; i++){
+            std::cout<<coords[i];
+            if (i != taille -1){
+                std::cout<<",";
+            }
         }
+        std::cout<<")\n";
+    }else{
+        std::cout<<"()";
     }
-    std::cout<<")";
+    
 }
+
+
