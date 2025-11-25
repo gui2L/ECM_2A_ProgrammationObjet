@@ -1,6 +1,8 @@
 #ifndef VECTOR_H
 #define VECTOR_H
 
+#include <iostream>
+
 class Vector {
 private:
 	int taille;
@@ -20,6 +22,8 @@ public:
     static int getCompteur(){
             return compteur;
         }
+
+    friend std::ostream &operator <<(std::ostream &stream, const Vector &v);
 };
 
 #endif

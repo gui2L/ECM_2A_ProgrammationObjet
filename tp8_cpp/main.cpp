@@ -9,6 +9,7 @@ int main(){
     v1.affiche();
     v2.affiche();
 
+    std::cout<< v1;
 
 
     return 0;

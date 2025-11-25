@@ -67,9 +67,25 @@ void Vector::affiche() const {
         }
         std::cout<<")\n";
     }else{
-        std::cout<<"()";
+        std::cout<<"()\n";
     }
     
+}
+
+std::ostream &operator <<(std::ostream &stream, const Vector &v) {
+	if (v.coords != nullptr){
+        stream<<"(";
+        for (int i = 0; i < v.taille; i++){
+            stream<< v.coords[i];
+            if (i != v.taille -1){
+                    stream<<",";
+            }
+        }
+        stream<<")";
+    }else{
+        stream<<"()\n";
+    }
+	return stream;
 }
 
 
