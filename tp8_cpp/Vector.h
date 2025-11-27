@@ -25,6 +25,8 @@ public:
 
     friend std::ostream &operator <<(std::ostream &stream, const Vector &v);
     Vector operator +(const Vector &v) const;
+    Vector(const Vector &v); // constructeur de recopie pour gérer la mémoire en utilisant l'opérateur =
+    Vector &operator =(const Vector &v);
 };
 
 #endif

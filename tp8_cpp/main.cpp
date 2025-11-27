@@ -16,9 +16,17 @@ int main(){
 
     Vector v6(2, 4, 8);
     std::cout<< "v6 = " << v6 << "\n";
-    
+
     std::cout<< "v + v1 = " << v + v1 << "\n";
     std::cout<< "v1 + v6 = "<< v1 + v6 << "\n";
+
+    Vector v7 = v1;
+    std::cout<< "v7 = " << v7 << "\n";
+    Vector v8; Vector v9;
+    v8 = v9 = v7;
+    std::cout<< "v8 = " << v8 << "\n";
+    std::cout<< "v9 = " << v9 << "\n";
+
 
 
     return 0;

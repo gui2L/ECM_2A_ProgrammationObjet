@@ -96,4 +96,27 @@ Vector Vector::operator +(const Vector &v) const{
 	return somme;
 }
 
+Vector::Vector(const Vector &v) {
+    taille = v.taille;
+    coords = new double[taille]; 
+    for (int i = 0; i < taille; i++) {
+        coords[i] = v.coords[i];
+    }
+    compteur++; 
+}
+
+Vector &Vector::operator =(const Vector &v) {
+    if (this != &v) {      
+        if (coords != nullptr) {
+            delete[] coords;
+        }
+        taille = v.taille;
+        coords = new double[taille];
+        for (int i = 0; i < taille; i++) {
+            coords[i] = v.coords[i];
+        }
+    }
+    return *this; 
+}
+
 
