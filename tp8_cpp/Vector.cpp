@@ -119,4 +119,14 @@ Vector &Vector::operator =(const Vector &v) {
     return *this; 
 }
 
+double Vector::operator *(const Vector &v) const {
+    double produit_scalaire = 0;
+    
+    for (int i = 0; i < taille; i++) {
+        produit_scalaire += coords[i] * v.coords[i];
+    }
+    
+    return produit_scalaire;
+}
+
 

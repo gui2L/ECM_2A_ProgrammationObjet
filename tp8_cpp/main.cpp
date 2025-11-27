@@ -27,6 +27,11 @@ int main(){
     std::cout<< "v8 = " << v8 << "\n";
     std::cout<< "v9 = " << v9 << "\n";
 
+    std::cout<< "Produit scalaire entre v1 et v1 = " << v1*v1 << "\n";
+    std::cout<< "Produit scalaire entre v1 et v = " << v1*v << "\n";
+
+
+
 
 
     return 0;
