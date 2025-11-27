@@ -28,6 +28,7 @@ public:
     Vector(const Vector &v); // constructeur de recopie pour gérer la mémoire en utilisant l'opérateur =
     Vector &operator =(const Vector &v);
     double operator *(const Vector &v) const;
+    Vector operator *(double k) const;
 };
 
 #endif
