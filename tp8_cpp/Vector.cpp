@@ -88,4 +88,12 @@ std::ostream &operator <<(std::ostream &stream, const Vector &v) {
 	return stream;
 }
 
+Vector Vector::operator +(const Vector &v) const{
+    Vector somme(taille) ;
+    for (int i = 0; i < taille; i++)
+		somme.coords[i] = coords[i] + v.coords[i];
+
+	return somme;
+}
+
 

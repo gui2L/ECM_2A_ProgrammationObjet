@@ -24,6 +24,7 @@ public:
         }
 
     friend std::ostream &operator <<(std::ostream &stream, const Vector &v);
+    Vector operator +(const Vector &v) const;
 };
 
 #endif

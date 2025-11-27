@@ -9,7 +9,16 @@ int main(){
     v1.affiche();
     v2.affiche();
 
-    std::cout<< v1;
+    Vector v(0, 0, 0);
+    std::cout<< "v = " << v << "\n";
+    
+    std::cout<< "v1 = "<< v1 << "\n";
+
+    Vector v6(2, 4, 8);
+    std::cout<< "v6 = " << v6 << "\n";
+    
+    std::cout<< "v + v1 = " << v + v1 << "\n";
+    std::cout<< "v1 + v6 = "<< v1 + v6 << "\n";
 
 
     return 0;
