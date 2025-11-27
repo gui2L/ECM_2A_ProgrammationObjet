@@ -39,6 +39,12 @@ int main(){
     v += v6;
     std::cout<< "v += v6 donne v =" << v << "\n";
 
+    std::cout<< (v8 == v9) << "\n";
+    std::cout<< ((k * v1) == (v1 * k)) << "\n";
+    std::cout<< (v1 != v5) << "\n";
+    std::cout<< (v1 != v6) << "\n";
+
+
 
 
 

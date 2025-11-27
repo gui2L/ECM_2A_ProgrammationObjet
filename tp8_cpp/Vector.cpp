@@ -156,8 +156,21 @@ Vector &Vector::operator +=(const Vector &v){
     return *this;
 }
 
-bool Vector::operator ==(const Vector& v) const{return false;}
-bool Vector::operator !=(const Vector& v) const{return false;}
+bool Vector::operator ==(const Vector& v) const{
+    if (taille != v.taille) {
+        return false;
+    }
+    for (int i = 0; i < taille; i++) {
+        if (coords[i] != v.coords[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+bool Vector::operator !=(const Vector& v) const{
+    return !(*this == v);
+}
 
 
 
