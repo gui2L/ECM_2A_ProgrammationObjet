@@ -139,4 +139,16 @@ Vector Vector::operator *(double k) const {
     return produit;
 }
 
+Vector operator *(double k, const Vector &v) {
+    Vector produit(v.taille); 
+    
+    for (int i = 0; i < v.taille; i++) {
+        produit.coords[i] = k * v.coords[i];
+    }
+    
+    return produit;
+}
+
+
+
 

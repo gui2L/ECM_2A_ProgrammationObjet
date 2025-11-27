@@ -29,6 +29,7 @@ public:
     Vector &operator =(const Vector &v);
     double operator *(const Vector &v) const;
     Vector operator *(double k) const;
+    friend Vector operator *(double k, const Vector &v);
 };
 
 #endif

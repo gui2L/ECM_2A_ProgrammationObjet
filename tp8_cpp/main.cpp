@@ -32,6 +32,8 @@ int main(){
 
     double k = 2;
     std::cout<< "v1 * k = " << v1*k << "\n";
+    std::cout<< "k * v1 = " << k * v1 << "\n";
+
 
 
 
