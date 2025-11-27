@@ -149,6 +149,16 @@ Vector operator *(double k, const Vector &v) {
     return produit;
 }
 
+Vector &Vector::operator +=(const Vector &v){
+    for (int i = 0; i < taille; i++) {
+        coords[i] += v.coords[i];
+    }
+    return *this;
+}
+
+bool Vector::operator ==(const Vector& v) const{return false;}
+bool Vector::operator !=(const Vector& v) const{return false;}
+
 
 
 

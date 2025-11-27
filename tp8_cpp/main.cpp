@@ -34,6 +34,11 @@ int main(){
     std::cout<< "v1 * k = " << v1*k << "\n";
     std::cout<< "k * v1 = " << k * v1 << "\n";
 
+    v += v1;
+    std::cout<< "v += v1 donne v =" << v << "\n";
+    v += v6;
+    std::cout<< "v += v6 donne v =" << v << "\n";
+
 
 
 

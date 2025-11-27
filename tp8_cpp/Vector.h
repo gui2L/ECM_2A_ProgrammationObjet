@@ -30,6 +30,11 @@ public:
     double operator *(const Vector &v) const;
     Vector operator *(double k) const;
     friend Vector operator *(double k, const Vector &v);
+
+    Vector &operator +=(const Vector &v);
+    bool operator ==(const Vector& v) const;
+	bool operator !=(const Vector& v) const;
+
 };
 
 #endif
