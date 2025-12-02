@@ -36,7 +36,7 @@ int minimum_2tab(int nb_ele1, int nb_ele2, T tab1[], U tab2[]){
 }
 
 template <typename T>
-ostream &operator <<(ostream &stream, Vector<T> &v) {
+ostream &operator <<(ostream &stream, const Vector<T> &v) {
     if (v.getTaille() > 0) {
         stream << "(";
         for (int i = 0; i < v.getTaille(); i++) {
@@ -52,7 +52,6 @@ ostream &operator <<(ostream &stream, Vector<T> &v) {
 
     return stream;
 }
-
 
 
 int main(){
@@ -85,9 +84,18 @@ int main(){
     Vector<string> vstring(3);
     
     v0.ajoute(3);
+    v0.ajoute(4);
     cout << v0.getTaille() << "\n";
     cout << v0.getdata_i(0)<< "\n";
-    cout << v0;
+    cout << v0 << "\n";
+
+    vstring.ajoute("A");
+    cout << vstring.getTaille() << "\n";
+    cout << vstring.getdata_i(0)<< "\n";
+    cout << vstring;
+    vstring.ajoute("B");vstring.ajoute("CCC");vstring.ajoute("DDDDDD");
+    cout << vstring;
+    
 
     return 0;
 }
