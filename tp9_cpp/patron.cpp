@@ -92,10 +92,14 @@ int main(){
     vstring.ajoute("A");
     cout << vstring.getTaille() << "\n";
     cout << vstring.getdata_i(0)<< "\n";
-    cout << vstring;
+    cout << vstring<< "\n";
     vstring.ajoute("B");vstring.ajoute("CCC");vstring.ajoute("DDDDDD");
-    cout << vstring;
+    cout << vstring<< "\n";
     
+    cout << v0[0];cout << v0[1]<< "\n";
+    cout << vstring[0];cout << vstring[1];cout << vstring[2];cout << vstring[3]<< "\n";
+
+    vstring[90];
 
     return 0;
 }

@@ -52,6 +52,13 @@ class Vector {
         T& getdata_i(int i) const{
             return data[i];
         }
+
+        T& operator[](int index) {
+            if (index < 0 || index >= taille) {
+                cerr<<"Erreur: Indice hors de la plage autorisee \n";
+            }
+            return data[index]; 
+        }
     
 };
 
