@@ -11,13 +11,15 @@ T somme(int nb_ele, T tab[]){
 };
 
 template <typename T> T minimum(int nb_ele, T tab[]){
-    T ele = T();
+    T min = T();
+    int indice = 0;
     for (int i = 0; i < nb_ele; i++){
-        if (ele > tab[i]) {
-            ele = tab[i];
+        if (min > tab[i]) {
+            min = tab[i];
+            indice = i;
         };
     }
-    return ele;
+    return indice;
 }
 
 int main(){
