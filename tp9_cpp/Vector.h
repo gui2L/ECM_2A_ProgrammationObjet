@@ -11,7 +11,8 @@ class Vector {
         int capacite;
 
     public:
-        Vector() : taille(0), data(nullptr), capacite(5) {
+        Vector() : taille(0), capacite(5) {
+            data = new T[capacite];
         }
    
         Vector(int taille) : taille(taille), capacite(taille*2) {
@@ -19,7 +20,8 @@ class Vector {
         }
     
         ~Vector(){
-                delete[] data;
+            if (data != nullptr){delete[] data;}
+            data = nullptr;
         }
 
         void reallouer(int new_capacite) {
@@ -43,6 +45,14 @@ class Vector {
             taille++;
         }
 
+        const int getTaille(){
+            return taille;
+        }
+
+        const T& getdata_i(int i){
+            return data[i];
+        }
+        
 };
 
 #endif

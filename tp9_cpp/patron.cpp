@@ -35,6 +35,26 @@ int minimum_2tab(int nb_ele1, int nb_ele2, T tab1[], U tab2[]){
     }
 }
 
+template <typename T>
+ostream &operator <<(ostream &stream, Vector<T> &v) {
+    if (v.getTaille() > 0) {
+        stream << "(";
+        for (int i = 0; i < v.getTaille(); i++) {
+            stream << v.getdata_i(i);
+            if (i != v.getTaille() - 1) {
+                stream << ", ";
+            }
+        }
+        stream << ")";
+    } else {
+        stream << "()";
+    }
+
+    return stream;
+}
+
+
+
 int main(){
 
     int entiers[] = {3, 2, 1, 5, 4}; int t_entiers = sizeof(entiers)/sizeof(entiers[0]);
@@ -65,7 +85,9 @@ int main(){
     Vector<string> vstring(3);
     
     v0.ajoute(3);
-    
+    cout << v0.getTaille() << "\n";
+    cout << v0.getdata_i(0)<< "\n";
+    cout << v0;
 
     return 0;
 }
