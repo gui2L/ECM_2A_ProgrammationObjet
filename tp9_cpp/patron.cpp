@@ -62,5 +62,10 @@ int main(){
 
     //ex4 Patron de classe
     Vector<int> v0;
+    Vector<string> vstring(3);
+    
+    v0.ajoute(3);
+    
+
     return 0;
 }
