@@ -15,8 +15,8 @@ class Vector {
             data = new T[capacite];
         }
    
-        Vector(int taille) : taille(taille), capacite(taille*2) {
-                data = new T[taille];
+        Vector(int taille) : taille(0), capacite(taille) {
+                data = new T[capacite];
         }
     
         ~Vector(){
@@ -28,7 +28,7 @@ class Vector {
             if (new_capacite <= capacite) return;
             T* new_data = new T[new_capacite];
     
-            for (size_t i = 0; i < taille; ++i) {
+            for (int i = 0; i < taille; ++i) {
                 new_data[i] = data[i];
             }
 
@@ -38,21 +38,21 @@ class Vector {
         }
 
         void ajoute(T valeur){
-            if (taille >= capacite) {  
+            if (taille >= capacite) { 
                 reallouer(capacite*2);
             }
             data[taille] = valeur;
             taille++;
         }
 
-        const int getTaille(){
+        int getTaille() const{
             return taille;
         }
 
-        const T& getdata_i(int i){
+        T& getdata_i(int i) const{
             return data[i];
         }
-        
+    
 };
 
 #endif
