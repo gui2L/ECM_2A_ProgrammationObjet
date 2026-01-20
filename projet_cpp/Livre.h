@@ -35,7 +35,7 @@ public:
     string getTitre() const;
     Etat getEtat() const;
     void setEtat(Etat e);
-    bool estLibre() const;
+    bool estLibre(string codeBiblio) const;
     void setProprio(string proprio);
     string getProprio() const;
 

@@ -85,12 +85,12 @@ void Bibliotheque::preterLivre(Adherent& adherent, string codeLivre) {
 
     if (!livreTrouve) throw Erreur("Livre introuvable.");
     
-    if (livreTrouve->estLibre()) {
+    if (livreTrouve->estLibre(code)) {
             adherent.ajouterEmprunt(livreTrouve);
             livreTrouve->setEtat(EMPRUNTE);
             cout << "ACCEPTED : Livre " << codeLivre << " prete a " << adherent.getNom() << endl;
     }else{
-        throw Erreur("Livre deja emprunte/prete.");
+        throw Erreur("Livre deja emprunte ou prete");
     }
 }
 
@@ -103,7 +103,11 @@ void Bibliotheque::recupererLivre(Adherent& adherent, string codeLivre) {
         while (courant != nullptr) {
             if (courant->donnee->getCode() == codeLivre) {
                 livreTrouve = courant->donnee;
-                livreTrouve->setEtat(LIBRE);
+                if (livreTrouve->getProprio() != this->code){ //si le livre emprunte est un livre prete par une autre bibliotheque
+                    livreTrouve->setEtat(PRETE);
+                }else{
+                    livreTrouve->setEtat(LIBRE);
+                }
                 adherent.rendreLivre(livreTrouve);
                 cout << "ACCEPTED : Livre " << codeLivre << " rendu par " << adherent.getNom() << endl;
                 return;
@@ -144,7 +148,7 @@ Livre* Bibliotheque::trouverLivre(string isbn) {
     Element<Livre*>* courant = stock.getTete();
     while (courant != nullptr) {
         // On vérifie l'isbn et si le livre est LIBRE
-        if (courant->donnee->getISBN() == isbn && courant->donnee->estLibre()) {
+        if (courant->donnee->getISBN() == isbn && courant->donnee->estLibre(code)) {
             return courant->donnee;
         }
         courant = courant->suivant;
@@ -170,7 +174,7 @@ void Bibliotheque::demanderLivre(string isbn, Bibliotheque& autreBiblio) {
 void Bibliotheque::rendreLivresPretes() {
     Element<Livre*>* courant = stock.getTete();
     
-    cout << "--- Retour des livres inter-bibliotheques ---" << endl;
+    cout << "\n--- Retour des livres inter-bibliotheques ---" << endl;
 
     while (courant != nullptr) {
         Livre* l = courant->donnee;

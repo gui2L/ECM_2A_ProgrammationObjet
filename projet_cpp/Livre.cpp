@@ -29,7 +29,7 @@ string Livre::getTitre() const { return titre;}
 
 void Livre::setEtat(Etat e) { etat = e; }
 void Livre::setProprio(string proprio) { proprietaire = proprio;}
-bool Livre::estLibre() const { return etat == LIBRE; }
+bool Livre::estLibre(string codeBiblio) const { return etat == LIBRE or (etat == PRETE and proprietaire != codeBiblio); } //2eme cas du (or) : livre prete par une autre bibliotheque
 
 
 
