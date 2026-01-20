@@ -12,6 +12,7 @@ classDiagram
     Adherent ..> Liste : utilise
 
     class Liste~T~ {
+        <<Template>>
         -tete : Element~T~#42;
         +Liste()
         +~Liste()
