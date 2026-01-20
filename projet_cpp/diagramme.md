@@ -7,6 +7,7 @@ classDiagram
     Adherent "0..*" --> "1" Bibliotheque : est inscrit à
     Adherent "1" --> "0..maxEmprunts" Livre : emprunte
     Adherent "1" o-- "0..maxEmprunts" Livre : emprunts
+    Bibliotheque "*" --> "*" Bibliotheque : prete livres à 
     
     %% Dépendances vers la classe Template
     Bibliotheque ..> Liste : utilise
