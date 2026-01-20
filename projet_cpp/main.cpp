@@ -22,7 +22,7 @@ int main() {
     Livre* al1 = new Album("AL01", "Max et les Maximonstres", "Maurice Sendak", "Ecole des Loisirs", "978-2211026225", JEUNESSE, "DESSINS");
     Livre* al2 = new Album("AL02", "La Terre vue du ciel", "Yann Arthus-Bertrand", "De La Martiniere", "978-2732428678", TOUT_PUBLIC, "PHOTOS");
     // Création des adhérents
-    Adherent adh1("Dupont", "Jean", "Paris", &bib1);
+    Adherent adh1("Dupont", "Jeffrey", "Paris", &bib1);
     Adherent adh2("Pat", "Bob", "Paris", &bib1);
     Adherent adh3("Lin", "Alice", "Marseille", &bib2);
 

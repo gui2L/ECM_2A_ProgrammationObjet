@@ -29,7 +29,7 @@ public:
     bool peutEmprunter() const;
     void ajouterEmprunt(Livre* l);
     void rendreLivre(Livre* l);
-    bool aEmprunte(string codeLivre) const; //verifie si le livre ayant ppour code codeLivre est un livre emprunte
+    bool aEmprunte(string codeLivre) const; //verifie si le livre ayant pour code codeLivre est un livre emprunte
     void afficher() const;
 };
 
