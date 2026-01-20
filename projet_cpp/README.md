@@ -4,7 +4,7 @@ réalisé par :
 - SURLEAU Guillaume - guillaume.surleau@centrale-med.fr 
 - BREMONT Edouard - edouard.bremont@centrale-med.fr
 ___
-
+___
 
 ##### Diagramme UML du projet
 ```mermaid
@@ -12,6 +12,7 @@ classDiagram
     %% Relations générales
     Bibliotheque "1" o-- "0..*" Adherent : inscrits
     Bibliotheque "1" o-- "0..*" Livre : stock
+    Bibliotheque "1" --> "0..*" Livre : achete
     Adherent "0..*" --> "1" Bibliotheque : est inscrit à
     Adherent "1" --> "0..maxEmprunts" Livre : emprunte
     Adherent "1" o-- "0..maxEmprunts" Livre : emprunts
