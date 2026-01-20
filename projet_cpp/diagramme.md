@@ -4,7 +4,8 @@ classDiagram
     Bibliotheque "1" o-- "0..*" Adherent : inscrits
     Bibliotheque "1" o-- "0..*" Livre : stock
     Adherent "0..*" --> "1" Bibliotheque : est inscrit à
-    Adherent "0..*" o-- "0..*" Livre : emprunts
+    Adherent "1" --> "0..maxEmprunts" Livre : emprunte
+    Adherent "1" o-- "0..maxEmprunts" Livre : emprunts
     
     %% Dépendances vers la classe Template
     Bibliotheque ..> Liste : utilise
