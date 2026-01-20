@@ -30,7 +30,7 @@ void Adherent::rendreLivre(Livre* l) {
     emprunts.supprimer(l); 
 }
 
-bool Adherent::aEmprunte(string codeLivre){
+bool Adherent::aEmprunte(string codeLivre) const{
     Element<Livre*>* courant = emprunts.getTete();
     while (courant != nullptr) {
         if (courant->donnee->getCode() == codeLivre) {

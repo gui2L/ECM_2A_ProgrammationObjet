@@ -12,7 +12,7 @@ struct Element {
     Element(T d) : donnee(d), suivant(nullptr) {}
 };
 
-// Classe Template Liste
+// Classe Template Liste pour représenter le stock d'une bibliotheque et la liste des adherents 
 template <typename T>
 class Liste {
 private:
